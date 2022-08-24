@@ -1,3 +1,10 @@
+const errorName = document.getElementById("massage-error-name");
+const errorPass = document.getElementById("massage-error-pass");
+const errorRetypePass = document.getElementById("massage-error-retypepass");
+const errorMail = document.getElementById("massage-error-mail");
+const errorNumberPhone = document.getElementById("massage-error-numberphone");
+const btnSubmit = document.querySelector(".form-input-submit");
+
 function checkform() {
     // Biến
     const name = document.getElementById("ht").value;
@@ -8,13 +15,6 @@ function checkform() {
     const reset = document.querySelector(".form-input-reset");
 
     // Biến massage
-    const errorName = document.getElementById("massage-error-name");
-    const errorPass = document.getElementById("massage-error-pass");
-    const errorRetypePass = document.getElementById("massage-error-retypepass");
-    const errorMail = document.getElementById("massage-error-mail");
-    const errorNumberPhone = document.getElementById(
-        "massage-error-numberphone"
-    );
 
     // Regex
     const nameRegex = /[a-zA-Z]+[0-9]/;
@@ -62,7 +62,7 @@ function checkform() {
     } else if (passwordConfirm == "") {
         errorRetypePass.innerHTML = "Không để trống";
     } else {
-        errorRetypePass.innerHTML = "Mật khẩu nhập lại hợp lệ";
+        errorRetypePass.innerHTML = "";
         errorRetypePass.style.color = "blue";
     }
 
@@ -87,8 +87,24 @@ function checkform() {
     } else {
         errorNumberPhone.innerHTML = "";
     }
+    if (
+        errorName.innerHTML == "" &&
+        errorMail.innerHTML == "" &&
+        errorPass.innerHTML == "" &&
+        errorRetypePass.innerHTML == "" &&
+        errorNumberPhone.innerHTML == ""
+    ) {
+        console.log("Error");
+        btnSubmit.disabled = false;
+        btnSubmit.classList.remove("disabled");
+    } else {
+        btnSubmit.disabled = true;
+        btnSubmit.classList.add("disabled");
+    }
 }
-var btnSubmit = document.querySelector(".form-input-submit");
-btnSubmit.addEventListener("click", () => {
-    checkform();
+const input = document.querySelectorAll("input");
+input.forEach((inp) => {
+    inp.addEventListener("input", (event) => {
+        checkform();
+    });
 });

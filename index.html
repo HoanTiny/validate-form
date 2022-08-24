@@ -8,7 +8,7 @@
         <title>FORM</title>
     </head>
     <body>
-        <form class="form-validate">
+        <form class="form-validate" onsubmit="checkform()">
             <h1>ĐĂNG NHẬP</h1>
 
             <!-- Name -->
@@ -47,7 +47,13 @@
             <p id="massage-error-numberphone" class="form-check-error"></p>
 
             <div class="form__row">
-                <button type="button" class="form-input-submit">Đăng ký</button>
+                <button
+                    type="submit"
+                    class="form-input-submit disabled"
+                    disabled
+                >
+                    Đăng ký
+                </button>
                 <button type="button" class="form-input-reset">Nhập lại</button>
             </div>
         </form>

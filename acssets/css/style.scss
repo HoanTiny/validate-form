@@ -36,6 +36,12 @@
     .form-input-submit {
         display: block;
     }
+    .form-input-submit.disabled {
+        background-color: #ccc;
+        color: #fff;
+        border: none;
+        cursor: default;
+    }
 
     .form-check-error {
         display: block;

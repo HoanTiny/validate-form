@@ -37,6 +37,12 @@
 .form-validate .form-input-submit {
   display: block;
 }
+.form-validate .form-input-submit.disabled {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  cursor: default;
+}
 .form-validate .form-check-error {
   display: block;
   text-align: left;

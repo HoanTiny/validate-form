@@ -1,25 +1,27 @@
 function checkform() {
     // Biến
-    var name = document.getElementById("ht").value;
-    var password = document.getElementById("pass").value;
-    var password1 = document.getElementById("pass1").value;
-    var gmail = document.getElementById("mail").value;
-    var numberPhone = document.getElementById("sdt").value;
-    var reset = document.querySelector(".form-input-reset");
+    const name = document.getElementById("ht").value;
+    const password = document.getElementById("pass").value;
+    const passwordConfirm = document.getElementById("pass1").value;
+    const gmail = document.getElementById("mail").value;
+    const numberPhone = document.getElementById("sdt").value;
+    const reset = document.querySelector(".form-input-reset");
 
     // Biến massage
-    var errorName = document.getElementById("massage_error_name");
-    var errorPass = document.getElementById("massage_error_pass");
-    var errorRetypePass = document.getElementById("massage_error_retypepass");
-    var errorMail = document.getElementById("massage_error_mail");
-    var errorNumberPhone = document.getElementById("massage_error_numberphone");
+    const errorName = document.getElementById("massage-error-name");
+    const errorPass = document.getElementById("massage-error-pass");
+    const errorRetypePass = document.getElementById("massage-error-retypepass");
+    const errorMail = document.getElementById("massage-error-mail");
+    const errorNumberPhone = document.getElementById(
+        "massage-error-numberphone"
+    );
 
     // Regex
-    var nameRegex = /[a-zA-Z]+[0-9]/;
-    var passRegex =
+    const nameRegex = /[a-zA-Z]+[0-9]/;
+    const passRegex =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    var mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var numberPhoneRegex = /^\d+$/;
+    const mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const numberPhoneRegex = /^\d+$/;
 
     // Reset input
     reset.addEventListener("click", function () {
@@ -34,7 +36,7 @@ function checkform() {
     if (name == "") {
         errorName.innerHTML = "Ô này không đc để trống";
     } else if (name.match(nameRegex)) {
-        errorName.innerHTML = "error";
+        errorName.innerHTML = "Tên không hợp lệ";
     } else if (isNaN(name)) {
         errorName.innerHTML = "";
     } else {
@@ -46,20 +48,18 @@ function checkform() {
         errorPass.innerHTML = "Không để trống";
     } else if (password.length < 6) {
         errorPass.innerHTML = "Mật khẩu trên 6 ký tự";
-    } else if (password.length < 6) {
-        errorPass.innerHTML = "Mật khẩu ko hợp lệ";
-        return;
     } else if (!password.match(passRegex)) {
-        errorPass.innerHTML = "Mật khẩu không hợp lệ";
+        errorPass.innerHTML =
+            "Mật khẩu phải bao gồm ít nhất 1 ký tự đặc biệt, 1 chữ cái in hoa và 1 số";
     } else {
         errorPass.innerHTML = "";
     }
 
     // Check  pass 2
-    if (password1 != password) {
+    if (passwordConfirm != password) {
         errorRetypePass.innerHTML = "Mật khẩu nhập lại không đúng";
         return;
-    } else if (password1 == "") {
+    } else if (passwordConfirm == "") {
         errorRetypePass.innerHTML = "Không để trống";
     } else {
         errorRetypePass.innerHTML = "Mật khẩu nhập lại hợp lệ";

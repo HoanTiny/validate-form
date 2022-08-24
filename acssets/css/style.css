@@ -1,53 +1,48 @@
-.form-web {
-    border: 1px solid #ccc;
-    margin: 0 auto;
-    width: 400px;
-    background-color: rgb(255, 227, 208);
-    border-radius: 5px;
+.form-validate {
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  width: 400px;
+  background-color: rgb(255, 227, 208);
+  border-radius: 5px;
+}
+.form-validate h1 {
+  text-align: center;
+}
+.form-validate .form__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+.form-validate .form__row span {
+  text-align: left;
+  padding: 0 10px;
+  width: 30%;
+  margin-right: 24px;
+}
+.form-validate .form__row-input {
+  margin-left: -30px;
+  flex: 1;
+  font-size: 18px;
+}
+.form-validate .form-input-submit,
+.form-validate .form-input-reset {
+  padding: 5px 10px;
+  background-color: red;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.form-validate .form-input-submit {
+  display: block;
+}
+.form-validate .form-check-error {
+  display: block;
+  text-align: left;
+  padding: 0 10px;
+  margin-left: 10px;
+  color: red;
 }
 
-h1 {
-    text-align: center;
-}
-
-.form-input-submit {
-    display: block;
-}
-
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    margin: 10px 0;
-}
-
-span {
-    text-align: left;
-    padding: 0 10px;
-    width: 30%;
-    margin-right: 24px;
-}
-
-.form-input {
-    margin-left: -30px;
-    flex: 1;
-    font-size: 18px;
-}
-
-.form-input-submit,
-.form-input-reset {
-    padding: 5px 10px;
-    background-color: red;
-    color: #fff;
-    margin: 0 auto;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.form-check-error {
-    display: block;
-    text-align: left;
-    padding: 0 10px;
-    margin-left: 10px;
-    color: red;
-}
+/*# sourceMappingURL=style.css.map */

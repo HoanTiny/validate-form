@@ -8,52 +8,81 @@
         <title>FORM</title>
     </head>
     <body>
-        <form class="form-validate" onsubmit="checkform()">
-            <h1>ĐĂNG NHẬP</h1>
+        <form class="form-validate">
+            <h1>ĐĂNG KÝ</h1>
 
             <!-- Name -->
             <div class="form__row">
-                <span class="form__row-name">Họ và tên</span>
-                <input type="text" id="ht" class="form__row-input" />
+                <div class="form__row-main">
+                    <span class="form__row-name">Họ và tên</span>
+                    <input
+                        type="text"
+                        id="ht"
+                        class="form__row-input"
+                        name="name"
+                    />
+                </div>
+                <p id="massage-error-name" class="form-check-error"></p>
             </div>
-            <p id="massage-error-name" class="form-check-error"></p>
 
             <!-- Pass -->
             <div class="form__row">
-                <span class="form__row-pass">Mật khẩu</span>
-                <input type="password" id="pass" class="form__row-input" />
+                <div class="form__row-main">
+                    <span class="form__row-pass">Mật khẩu</span>
+                    <input
+                        type="password"
+                        id="pass"
+                        class="form__row-input"
+                        name="password"
+                    />
+                </div>
+                <p id="massage-error-pass" class="form-check-error"></p>
             </div>
-            <p id="massage-error-pass" class="form-check-error"></p>
 
             <!-- Retype Pass -->
             <div class="form__row">
-                <span class="form__row-passcheck">Nhập lại mật khẩu</span>
-                <input type="password" id="pass1" class="form__row-input" />
+                <div class="form__row-main">
+                    <span class="form__row-passcheck">Nhập lại mật khẩu</span>
+                    <input
+                        type="password"
+                        id="pass1"
+                        class="form__row-input"
+                        name="passconfirm"
+                    />
+                </div>
+                <p id="massage-error-retypepass" class="form-check-error"></p>
             </div>
-            <p id="massage-error-retypepass" class="form-check-error"></p>
 
             <!-- Check mail -->
             <div class="form__row">
-                <span class="form__row-pass">Gmail</span>
-                <input type="mail" id="mail" class="form__row-input" />
+                <div class="form__row-main">
+                    <span class="form__row-pass">Gmail</span>
+                    <input
+                        type="mail"
+                        id="mail"
+                        class="form__row-input"
+                        name="mail"
+                    />
+                </div>
+                <p id="massage-error-mail" class="form-check-error"></p>
             </div>
-            <p id="massage-error-mail" class="form-check-error"></p>
 
             <!-- Check number phone -->
             <div class="form__row">
-                <span class="form__row-phone">SĐT</span>
-                <input type="text" id="sdt" class="form__row-input" />
+                <div class="form__row-main">
+                    <span class="form__row-phone">SĐT</span>
+                    <input
+                        type="text"
+                        id="sdt"
+                        class="form__row-input"
+                        name="sdt"
+                    />
+                </div>
+                <p id="massage-error-numberphone" class="form-check-error"></p>
             </div>
-            <p id="massage-error-numberphone" class="form-check-error"></p>
 
             <div class="form__row">
-                <button
-                    type="submit"
-                    class="form-input-submit disabled"
-                    disabled
-                >
-                    Đăng ký
-                </button>
+                <button type="submit" class="form-input-submit">Đăng ký</button>
                 <button type="button" class="form-input-reset">Nhập lại</button>
             </div>
         </form>

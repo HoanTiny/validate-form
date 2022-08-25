@@ -10,9 +10,14 @@
 }
 .form-validate .form__row {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0 10px;
   margin: 10px 0;
+}
+.form-validate .form__row-main {
+  width: 100%;
+  display: flex;
 }
 .form-validate .form__row span {
   text-align: left;

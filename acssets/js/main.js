@@ -24,11 +24,13 @@ const mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const numberPhoneRegex = /^\d+$/;
 
 reset.addEventListener("click", function () {
-    document.getElementById("ht").value = "";
-    document.getElementById("pass").value = "";
-    document.getElementById("pass1").value = "";
-    document.getElementById("date").value = "";
-    document.getElementById("img").value = null;
+    username.value = "";
+    password.value = "";
+    passwordConfirm.value = "";
+    numberPhone.value = "";
+    gmail.value = "";
+    // document.getElementById("date").value = "";
+    // document.getElementById("img").value = null;
 });
 
 function showError(input, message) {
@@ -40,7 +42,6 @@ function showError(input, message) {
 function showSuccess(input) {
     const formControl = input.parentElement.parentElement;
     const errorElement = formControl.querySelector("p");
-    console.log(errorElement);
     errorElement.innerText = "";
 }
 
